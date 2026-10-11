@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171426">
+<meta name="description" content="Creator AI — مساعدك لصناعة المحتوى ومشاركة الأفكار.">
+<title>Creator AI | اصنع محتواك</title>
+<style>
+:root{--bg:#100f18;--panel:#191725;--panel2:#211e31;--text:#f6f4ff;--muted:#b8b3ca;--accent:#8b70ff;--accent2:#b29cff;--border:#343047;--good:#7de2b8;--danger:#ff8e9c;--shadow:0 12px 35px #0003}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 85% -10%,#382565 0,transparent 35%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.6}button,input,textarea,select{font:inherit}button{cursor:pointer}.wrap{max-width:1120px;margin:auto;padding:18px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:8px 0 18px}.brand{display:flex;align-items:center;gap:11px;font-weight:900;font-size:1.35rem}.logo{width:44px;height:44px;border-radius:15px;background:linear-gradient(135deg,#a48bff,#6544df);display:grid;place-items:center;box-shadow:0 8px 25px #8b70ff55;font-size:1.35rem}.muted{color:var(--muted)}.actions,.tabs,.row{display:flex;gap:9px;flex-wrap:wrap;align-items:center}.btn{border:1px solid var(--border);border-radius:12px;padding:10px 14px;background:var(--panel2);color:var(--text);font-weight:700}.btn.primary{background:linear-gradient(135deg,#957aff,#6947e5);border-color:transparent}.btn.small{padding:7px 10px;font-size:.9rem}.btn:disabled{opacity:.55;cursor:not-allowed}.hero{padding:28px 0 22px;display:grid;grid-template-columns:1.4fr .8fr;gap:18px;align-items:center}.hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.15;margin:0 0 14px}.gradient{background:linear-gradient(90deg,#d6caff,#9d83ff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:650px;color:var(--muted);font-size:1.06rem}.hero-card,.card{background:linear-gradient(160deg,#211e31,#171622);border:1px solid var(--border);border-radius:20px;padding:20px;box-shadow:var(--shadow)}.hero-card .big{font-size:2.5rem}.status{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--border);border-radius:999px;padding:5px 10px;color:var(--muted);font-size:.82rem}.dot{width:8px;height:8px;border-radius:50%;background:#ffca70}.tabs{border-bottom:1px solid var(--border);padding:8px 0 14px;margin-bottom:18px}.tab{background:transparent;border:1px solid transparent;color:var(--muted);padding:9px 13px;border-radius:12px}.tab.active{background:#292343;color:#fff;border-color:#51427b}.view{display:none}.view.active{display:block}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}h2{margin:0 0 6px;font-size:1.45rem}h3{margin:0 0 7px}.card p{margin-top:5px}.field{display:flex;flex-direction:column;gap:6px;margin:12px 0}.field label{font-weight:700;font-size:.92rem}.field input,.field textarea,.field select,.search{width:100%;border:1px solid var(--border);border-radius:12px;background:#11101a;color:var(--text);padding:11px 12px;outline:none}.field textarea{min-height:125px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--accent)}.output{white-space:pre-wrap;background:#11101a;border:1px solid var(--border);padding:15px;border-radius:14px;min-height:100px;overflow-wrap:anywhere}.notice{border:1px solid #66558e;background:#241d37;padding:12px 14px;border-radius:13px;color:#ded6ff;margin:12px 0}.notice.warning{border-color:#80683a;background:#302717;color:#ffe5ad}.idea{background:#171622;border:1px solid var(--border);border-radius:16px;padding:15px;display:flex;flex-direction:column;gap:9px}.idea h3{font-size:1.12rem}.meta{display:flex;gap:7px;flex-wrap:wrap;color:var(--muted);font-size:.82rem}.pill{border:1px solid var(--border);padding:3px 8px;border-radius:999px}.idea-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto}.empty{padding:28px;text-align:center;color:var(--muted);border:1px dashed var(--border);border-radius:15px}.footer{padding:30px 0 15px;color:var(--muted);font-size:.88rem;text-align:center}.toast{position:fixed;bottom:18px;left:18px;right:18px;max-width:500px;margin:auto;background:#2b2540;border:1px solid #66558e;color:white;padding:13px 16px;border-radius:13px;box-shadow:var(--shadow);display:none;z-index:10}.hide{display:none!important}.smalltext{font-size:.85rem;color:var(--muted)}.split{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}.hr{height:1px;background:var(--border);margin:16px 0}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:15px}.grid,.grid.three{grid-template-columns:1fr}.wrap{padding:13px}.hero-card{padding:16px}.top .actions{width:100%}.top .actions .btn{flex:1}.tabs{overflow-x:auto;flex-wrap:nowrap}.tab{white-space:nowrap}.card{padding:16px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><div class="logo">✦</div><div>Creator <span class="gradient">AI</span><div class="smalltext">اصنع محتواك، وشارك أفكارك</div></div></div>
+    <div class="actions"><span id="connectionStatus" class="status"><span class="dot"></span> وضع تجريبي — لم يتم ربط الخدمات</span><button class="btn small" id="themeBtn">☀️ / 🌙</button><button class="btn small" id="langBtn">English</button></div>
+  </header>
+
+  <section class="hero">
+    <div><span class="status">✦ مساعد صُنّاع المحتوى</span><h1>فكرتك الجاية تبدأ <span class="gradient">من هنا.</span></h1><p>ولّد أفكارًا وسكريبتات وهاشتاجات، خطّط لفيديوهاتك، أو شارك فكرتك مع مجتمع من صُنّاع المحتوى.</p><div class="actions"><button class="btn primary" data-go="studio">ابدأ صناعة المحتوى ←</button><button class="btn" data-go="community">اكتشف الأفكار</button></div></div>
+    <div class="hero-card"><div class="big">💡 🎬 ✨</div><h3>من الفكرة للنشر</h3><p class="muted">أدوات صناعة محتوى ومجتمع أفكار في مكان واحد.</p><div class="hr"></div><div class="split"><span class="muted">الخدمات</span><strong id="serviceLabel">تجريبية حاليًا</strong></div></div>
+  </section>
+
+  <nav class="tabs" aria-label="التنقل">
+    <button class="tab active" data-tab="studio">🎬 استوديو المحتوى</button>
+    <button class="tab" data-tab="community">💡 مجتمع الأفكار</button>
+    <button class="tab" data-tab="saved">🔖 المحفوظات</button>
+    <button class="tab" data-tab="setup">⚙️ ربط الخدمات</button>
+  </nav>
+
+  <main>
+    <section class="view active" id="view-studio">
+      <div class="grid">
+        <div class="card">
+          <h2>استوديو المحتوى</h2><p class="muted">اختار الأداة واكتب فكرتك، وبعدها اضغط توليد.</p>
+          <div class="field"><label for="toolType">نوع المحتوى</label><select id="toolType"><option value="idea">اقتراح أفكار فيديوهات</option><option value="script">كتابة سكريبت</option><option value="caption">كابشن ووصف</option><option value="hashtags">هاشتاجات</option><option value="scenes">تقسيم مشاهد ومونتاج</option><option value="calendar">خطة محتوى أسبوعية</option></select></div>
+          <div class="field"><label for="platform">المنصة</label><select id="platform"><option>TikTok</option><option>YouTube Shorts</option><option>Instagram Reels</option><option>YouTube</option><option>Facebook</option></select></div>
+          <div class="field"><label for="language">لغة المحتوى</label><select id="language"><option>مصري</option><option>عربي فصحى</option><option>English</option></select></div>
+          <div class="field"><label for="niche">مجال المحتوى</label><input id="niche" placeholder="مثال: الأنمي، التقنية، معلومات عامة"></div>
+          <div class="field"><label for="duration">المدة (للفيديو)</label><select id="duration"><option>30 ثانية</option><option selected>60 ثانية</option><option>90 ثانية</option><option>3 دقائق</option><option>10 دقائق</option></select></div>
+          <div class="field"><label for="prompt">اشرح فكرتك أو اكتب طلبك</label><textarea id="prompt" placeholder="مثال: عايز فيديو قصير عن أغرب 3 معلومات في عالم الأنمي، مع بداية تشد الانتباه..."></textarea></div>
+          <button class="btn primary" id="generateBtn">✨ ولّد المحتوى</button>
+          <p class="smalltext">عند عدم ربط خدمة AI، سيظهر نموذج توضيحي فقط، وليس ردًا من ذكاء اصطناعي حقيقي.</p>
+        </div>
+        <div class="card"><div class="split"><h2>النتيجة</h2><button class="btn small" id="copyOutput">نسخ</button></div><div id="output" class="output">النتيجة هتظهر هنا بعد ما تكتب طلبك.</div><div class="actions" style="margin-top:10px"><button class="btn small" id="saveOutput">🔖 احفظ النتيجة</button><button class="btn small" id="downloadOutput">تنزيل TXT</button></div><div class="notice warning" id="aiNotice">الوضع التجريبي نشط. اربط عنوان AI API آمنًا من إعدادات الخدمات لتفعيل التوليد الحقيقي.</div></div>
+      </div>
+    </section>
+
+    <section class="view" id="view-community">
+      <div class="split"><div><h2>مجتمع الأفكار</h2><p class="muted">شارك فكرة، أو خُد إلهامًا من أفكار الآخرين ونفّذها مع ذكر صاحبها.</p></div><button class="btn primary" id="showPostForm">＋ انشر فكرة</button></div>
+      <div class="notice">أي فكرة منشورة يمكن لأي شخص تنفيذها دون موافقة مسبقة. سيظهر اسم صاحب الفكرة عند عرضها وتنفيذها. لا تنشر معلومات خاصة أو مواد لا تملك حق مشاركتها.</div>
+      <div class="card hide" id="postForm">
+        <h3>انشر فكرة جديدة</h3>
+        <div class="field"><label for="creatorName">اسمك الظاهر</label><input id="creatorName" maxlength="40" placeholder="مثال: Biko"></div>
+        <div class="field"><label for="ideaTitle">عنوان الفكرة</label><input id="ideaTitle" maxlength="100" placeholder="عنوان قصير وواضح"></div>
+        <div class="field"><label for="ideaDescription">اشرح الفكرة</label><textarea id="ideaDescription" maxlength="2000" placeholder="إيه اللي هيحصل في الفيديو؟ وإيه المختلف فيه؟"></textarea></div>
+        <div class="grid"><div class="field"><label for="ideaCategory">التصنيف</label><select id="ideaCategory"><option>أنمي</option><option>تعليم ومعلومات</option><option>كوميديا</option><option>تقنية وذكاء اصطناعي</option><option>ألعاب</option><option>قصص</option><option>متنوع</option></select></div><div class="field"><label for="ideaPlatform">المنصة المقترحة</label><select id="ideaPlatform"><option>TikTok</option><option>YouTube Shorts</option><option>Instagram Reels</option><option>YouTube</option><option>أي منصة</option></select></div></div>
+        <div class="actions"><button class="btn primary" id="publishIdea">نشر الفكرة</button><button class="btn" id="cancelPost">إلغاء</button></div>
+        <p class="smalltext">قبل ربط قاعدة البيانات، تُحفظ الأفكار على هذا الجهاز فقط ولن تظهر للمستخدمين الآخرين.</p>
+      </div>
+      <div class="row" style="margin:14px 0"><input class="search" id="ideaSearch" style="flex:1;min-width:180px" placeholder="ابحث في الأفكار..."><select class="search" id="categoryFilter" style="max-width:210px"><option value="">كل التصنيفات</option><option>أنمي</option><option>تعليم ومعلومات</option><option>كوميديا</option><option>تقنية وذكاء اصطناعي</option><option>ألعاب</option><option>قصص</option><option>متنوع</option></select></div>
+      <div id="ideaFeed" class="grid"><div class="empty">جاري تحميل الأفكار...</div></div>
+    </section>
+
+    <section class="view" id="view-saved">
+      <h2>المحفوظات</h2><p class="muted">النتائج التي حفظتها على هذا الجهاز.</p><div id="savedFeed" class="grid"><div class="empty">لسه مفيش عناصر محفوظة.</div></div>
+    </section>
+
+    <section class="view" id="view-setup">
+      <h2>ربط الخدمات</h2><p class="muted">الواجهة جاهزة كبداية. عشان الـAI والمجتمع يشتغلوا لكل المستخدمين، محتاجين ربطًا آمنًا بالخدمات.</p>
+      <div class="grid">
+        <div class="card"><h3>🤖 توليد AI الحقيقي</h3><p>أنشئ API خلفيًا على خدمة موثوقة (مثل Supabase Edge Functions) ليتصل بمزوّد الذكاء الاصطناعي. لا تضع مفتاح API في هذا الملف.</p><div class="field"><label for="aiEndpoint">عنوان AI endpoint (اختياري)</label><input id="aiEndpoint" type="url" placeholder="https://your-project.../functions/v1/generate"></div><button class="btn primary" id="saveAiEndpoint">حفظ العنوان على هذا الجهاز</button><p class="smalltext">يُحفظ العنوان محليًا فقط. لا تلصق أي مفتاح سري هنا.</p></div>
+        <div class="card"><h3>🗃️ مجتمع مشترك</h3><p>لظهور المنشورات والتعليقات والإعجابات على كل الأجهزة، اربط قاعدة بيانات مثل Supabase وأنشئ سياسات وصول آمنة.</p><div class="field"><label for="supabaseUrl">Supabase Project URL</label><input id="supabaseUrl" type="url" placeholder="https://xxxx.supabase.co"></div><div class="field"><label for="supabaseKey">Supabase publishable/anon key</label><input id="supabaseKey" type="password" placeholder="مفتاح النشر العام فقط"></div><button class="btn primary" id="saveSupabase">حفظ إعدادات المجتمع</button><p class="smalltext">استخدم المفتاح العام فقط مع سياسات قاعدة بيانات صحيحة. ممنوع وضع service_role key في المتصفح.</p></div>
+      </div>
+      <div class="notice warning"><strong>مهم:</strong> حفظ رابط Supabase في الواجهة وحده لا ينشئ الجداول أو يضمن أمانها. يجب إعداد الجداول وسياسات RLS أولًا. في النسخة الحالية، الأفكار محلية حتى يتم استكمال ربط Supabase.</div>
+      <div class="card"><h3>خطة الإطلاق المجانية</h3><ol><li>ارفع <code>index.html</code> إلى GitHub.</li><li>فعّل GitHub Pages لنشر الواجهة.</li><li>أنشئ مشروع Supabase للجداول والمجتمع.</li><li>أنشئ وظيفة خلفية آمنة لتوليد AI، ثم ضع عنوانها في الحقل أعلاه.</li><li>اختبر كل ميزة من جهاز آخر قبل إعلان أن المجتمع يعمل.</li></ol></div>
+    </section>
+  </main>
+  <footer class="footer">Creator AI · اصنع محتواك، وشارك أفكارك · نسخة أولية قابلة للتطوير</footer>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+(() => {
+ const $ = s => document.querySelector(s);
+ const $$ = s => [...document.querySelectorAll(s)];
+ const keys = {ideas:'creatorai_ideas_v1',saved:'creatorai_saved_v1',endpoint:'creatorai_endpoint_v1',sburl:'creatorai_sburl_v1',sbkey:'creatorai_sbkey_v1',theme:'creatorai_theme_v1',lang:'creatorai_lang_v1'};
+ const read = (k, fallback=[]) => {try{return JSON.parse(localStorage.getItem(k)) ?? fallback}catch{return fallback}};
+ const write = (k,v) => localStorage.setItem(k,JSON.stringify(v));
+ const toast = msg => {const t=$('#toast');t.textContent=msg;t.style.display='block';clearTimeout(window.__toastTimer);window.__toastTimer=setTimeout(()=>t.style.display='none',3000)};
+ let outputText = '';
+ let ideas = read(keys.ideas, []);
+ let saved = read(keys.saved, []);
+ let lang = 'ar';
+ const demoIdeas = [
+  {id:'sample1',title:'لو شخصية أنمي دخلت عالمنا؟',description:'اعمل فيديو تخيّلي يشرح كيف ستتعامل شخصية مشهورة مع مواقف الحياة اليومية، مع نهاية كوميدية.',creator:'Creator AI — مثال',category:'أنمي',platform:'TikTok',likes:0,sample:true},
+  {id:'sample2',title:'3 أخطاء بتضعف بداية الفيديو',description:'اعرض أمثلة سريعة لبدايات طويلة أو غير واضحة، ثم قدّم بدائل تشد المشاهد من أول ثانيتين.',creator:'Creator AI — مثال',category:'تعليم ومعلومات',platform:'YouTube Shorts',likes:0,sample:true},
+  {id:'sample3',title:'اختبر معلومة منتشرة على الإنترنت',description:'ابدأ بالمعلومة، توقّع الجمهور، ثم وضّح طريقة التحقق منها بمصادر موثوقة.',creator:'Creator AI — مثال',category:'متنوع',platform:'Instagram Reels',likes:0,sample:true}
+ ];
+ function setTab(tab){$$('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));$$('.view').forEach(v=>v.classList.toggle('active',v.id==='view-'+tab));if(tab==='saved')renderSaved();if(tab==='community')renderIdeas();window.scrollTo({top:0,behavior:'smooth'})}
+ $$('.tab').forEach(b=>b.addEventListener('click',()=>setTab(b.dataset.tab)));
+ $$('[data-go]').forEach(b=>b.addEventListener('click',()=>setTab(b.dataset.go)));
+ $('#themeBtn').addEventListener('click',()=>{const light=document.body.dataset.theme!=='light';document.body.dataset.theme=light?'light':'dark';if(light){document.documentElement.style.setProperty('--bg','#f4f1ff');document.documentElement.style.setProperty('--panel','#fff');document.documentElement.style.setProperty('--panel2','#eee9ff');document.documentElement.style.setProperty('--text','#211a35');document.documentElement.style.setProperty('--muted','#655d79');document.documentElement.style.setProperty('--border','#d9d1ec')}else{['--bg','--panel','--panel2','--text','--muted','--border'].forEach((v,i)=>document.documentElement.style.removeProperty(v))}localStorage.setItem(keys.theme,light?'light':'dark')});
+ if(localStorage.getItem(keys.theme)==='light')$('#themeBtn').click();
+ $('#langBtn').addEventListener('click',()=>toast('واجهة العربية هي المتاحة في هذه النسخة الأولية. دعم الإنجليزية الكامل يحتاج استكمالًا.'));
+ $('#showPostForm').addEventListener('click',()=>$('#postForm').classList.toggle('hide'));
+ $('#cancelPost').addEventListener('click',()=>$('#postForm').classList.add('hide'));
+ function renderIdeas(){
+  const q=$('#ideaSearch').value.trim().toLowerCase(),cat=$('#categoryFilter').value;
+  const all=[...ideas,...demoIdeas].filter(i=>(!q||(i.title+' '+i.description+' '+i.category+' '+i.creator).toLowerCase().includes(q))&&(!cat||i.category===cat));
+  const feed=$('#ideaFeed');
+  if(!all.length){feed.innerHTML='<div class="empty">مفيش أفكار مطابقة. جرّب بحثًا مختلفًا أو انشر فكرة جديدة.</div>';return}
+  feed.innerHTML=all.map(i=>`<article class="idea"><div class="meta"><span class="pill">${esc(i.category)}</span><span class="pill">${esc(i.platform)}</span>${i.sample?'<span class="pill">مثال توضيحي</span>':''}</div><h3>${esc(i.title)}</h3><p>${esc(i.description)}</p><div class="meta">صاحب الفكرة: <strong>${esc(i.creator||'مستخدم')}</strong></div><div class="idea-actions"><button class="btn primary small" data-exec="${esc(i.id)}">نفّذ الفكرة</button><button class="btn small" data-like="${esc(i.id)}">♥ ${Number(i.likes)||0}</button><button class="btn small" data-saveidea="${esc(i.id)}">🔖 حفظ</button></div></article>`).join('');
+  $$('[data-exec]').forEach(b=>b.addEventListener('click',()=>{const i=all.find(x=>x.id===b.dataset.exec);if(!i)return;$('#prompt').value=`الفكرة الأصلية: ${i.title}\nالتفاصيل: ${i.description}\nصاحب الفكرة: ${i.creator}\nأنشئ محتوى جديدًا مستوحى من الفكرة مع ذكر صاحب الفكرة الأصلي.`;$('#niche').value=i.category;setTab('studio');toast('نقلنا الفكرة إلى استوديو المحتوى. اكتب طلبك واضغط توليد.')}));
+  $$('[data-like]').forEach(b=>b.addEventListener('click',()=>{const i=ideas.find(x=>x.id===b.dataset.like);if(!i){toast('الإعجابات المشتركة تتطلب ربط قاعدة بيانات.');return}i.likes=(Number(i.likes)||0)+1;write(keys.ideas,ideas);renderIdeas()}));
+  $$('[data-saveidea]').forEach(b=>b.addEventListener('click',()=>{const i=all.find(x=>x.id===b.dataset.saveidea);if(i){saved.unshift({id:'s'+Date.now(),title:i.title,content:i.description,type:'فكرة من المجتمع'});write(keys.saved,saved);toast('تم حفظ الفكرة على هذا الجهاز.')}}));
+ }
+ function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+ $('#ideaSearch').addEventListener('input',renderIdeas);$('#categoryFilter').addEventListener('change',renderIdeas);
+ $('#publishIdea').addEventListener('click',()=>{
+  const creator=$('#creatorName').value.trim(),title=$('#ideaTitle').value.trim(),description=$('#ideaDescription').value.trim();
+  if(!creator||!title||!description){toast('اكتب اسمك وعنوان الفكرة وشرحها الأول.');return}
+  const i={id:'i'+Date.now(),creator,title,description,category:$('#ideaCategory').value,platform:$('#ideaPlatform').value,likes:0,createdAt:new Date().toISOString()};
+  ideas.unshift(i);write(keys.ideas,ideas);$('#ideaTitle').value='';$('#ideaDescription').value='';$('#postForm').classList.add('hide');renderIdeas();toast('تم حفظ الفكرة على جهازك فقط. اربط قاعدة بيانات لتظهر للجميع.')
+ });
+ function renderSaved(){const feed=$('#savedFeed');if(!saved.length){feed.innerHTML='<div class="empty">لسه مفيش عناصر محفوظة. احفظ نتيجة أو فكرة علشان تظهر هنا.</div>';return}feed.innerHTML=saved.map((s,i)=>`<article class="idea"><div class="meta"><span class="pill">${esc(s.type||'محتوى')}</span></div><h3>${esc(s.title||'محتوى محفوظ')}</h3><p>${esc(s.content||'')}</p><div class="idea-actions"><button class="btn small" data-copy="${i}">نسخ</button><button class="btn small" data-delete="${i}">حذف</button></div></article>`).join('');$$('[data-copy]').forEach(b=>b.addEventListener('click',()=>copy(saved[+b.dataset.copy].content)));$$('[data-delete]').forEach(b=>b.addEventListener('click',()=>{saved.splice(+b.dataset.delete,1);write(keys.saved,saved);renderSaved();toast('تم الحذف')}))}
+ async function copy(text){try{await navigator.clipboard.writeText(text);toast('تم النسخ')}catch{toast('النسخ التلقائي غير متاح في هذا المتصفح. حدّد النص وانسخه يدويًا.')}}
+ $('#copyOutput').addEventListener('click',()=>outputText?copy(outputText):toast('مفيش نتيجة لنسخها.'));
+ $('#saveOutput').addEventListener('click',()=>{if(!outputText){toast('ولّد محتوى الأول.');return}saved.unshift({id:'s'+Date.now(),title:$('#toolType').selectedOptions[0].text,content:outputText,type:'نتيجة AI'});write(keys.saved,saved);toast('اتحفظت النتيجة على جهازك.')});
+ $('#downloadOutput').addEventListener('click',()=>{if(!outputText){toast('ولّد محتوى الأول.');return}const blob=new Blob([outputText],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='creator-ai-content.txt';a.click();URL.revokeObjectURL(url)});
+ $('#saveAiEndpoint').addEventListener('click',()=>{const u=$('#aiEndpoint').value.trim();if(u&&!/^https:\/\//i.test(u)){toast('استخدم عنوان HTTPS آمن.');return}localStorage.setItem(keys.endpoint,u);toast('تم حفظ عنوان الخدمة على هذا الجهاز.')});
+ $('#saveSupabase').addEventListener('click',()=>{const u=$('#supabaseUrl').value.trim(),k=$('#supabaseKey').value.trim();if(u&&!/^https:\/\/.+\.supabase\.co\/?$/i.test(u)){toast('راجع عنوان مشروع Supabase.');return}localStorage.setItem(keys.sburl,u);localStorage.setItem(keys.sbkey,k);toast('تم حفظ الإعدادات محليًا. يلزم إعداد قاعدة البيانات والسياسات قبل الاتصال الفعلي.')});
+ $('#aiEndpoint').value=localStorage.getItem(keys.endpoint)||'';$('#supabaseUrl').value=localStorage.getItem(keys.sburl)||'';$('#supabaseKey').value=localStorage.getItem(keys.sbkey)||'';
+ function sampleOutput(type,prompt,niche,platform,duration,language){
+  const topic=prompt||niche||'فكرة محتوى جديدة';
+  const lang=language==='English';
+  const start=lang?'Hook: Did you know this surprising fact?':'الافتتاحية: استنى! عندي لك فكرة هتشد انتباهك من أول ثانية.';
+  if(type==='idea')return `أفكار مقترحة عن: ${topic}\n\n1) حقيقة غير متوقعة: ابدأ بسؤال مثير ثم اكشف المعلومة.\n2) صح ولا غلط؟ اعرض اعتقادًا شائعًا واختبره بمصدر موثوق.\n3) تحدّي 3 اختيارات: خلّي الجمهور يخمّن قبل الإجابة.\n\nالمنصة: ${platform}\nملاحظة: دي أمثلة تجريبية وليست نتيجة AI حقيقية.`;
+  if(type==='hashtags')return `هاشتاجات مبدئية لموضوع ${topic}:\n#${topic.replace(/\s+/g,'_')} #محتوى_عربي #صناعة_المحتوى #${platform.replace(/\s+/g,'')} #CreatorAI\n\nراجع ملاءمة كل هاشتاج قبل النشر. لا توجد هاشتاجات تضمن الانتشار.\n[نموذج تجريبي]`;
+  if(type==='caption')return `عندك فضول تعرف أكتر عن ${topic}؟ 👀\nاكتب رأيك في التعليقات، وابعت الفيديو لصاحبك المهتم بالموضوع!\n\n${platform} | #محتوى_عربي\n[نموذج تجريبي — ليس توليدًا حقيقيًا من AI]`;
+  if(type==='scenes')return `خطة مشاهد: ${topic}\n\n0–3 ثوانٍ: ${start}\n3–${duration}: اعرض الفكرة بصريًا مع نصوص قصيرة على الشاشة.\nالنهاية: لخّص المعلومة واطلب من الجمهور التعليق.\nالمونتاج: قصّات واضحة، ترجمة مقروءة، ومؤثرات صوتية خفيفة.\n\n[نموذج تجريبي]`;
+  if(type==='calendar')return `خطة أسبوعية تجريبية عن ${topic}\n\nاليوم 1: معلومة سريعة.\nاليوم 2: سؤال للجمهور.\nاليوم 3: قصة أو تجربة.\nاليوم 4: تصحيح معلومة منتشرة.\nاليوم 5: قائمة بأفضل 3 نصائح.\nاليوم 6: رد على تعليق.\nاليوم 7: ملخص الأسبوع.\n\nعدّل الخطة حسب وقتك ونتائج حسابك. [نموذج تجريبي]`;
+  return `${start}\n\nالموضوع: ${topic}\nالمنصة: ${platform} | المدة: ${duration}\n\nالمشهد 1 — البداية: اطرح سؤالًا أو حقيقة تلفت الانتباه.\nالتعليق الصوتي: «عمرك فكرت في الموضوع ده؟ خلينا نكتشفه مع بعض.»\n\nالمشهد 2 — الشرح: اشرح الفكرة في 2–3 نقاط واضحة، واستخدم أمثلة أو لقطات مناسبة تملك حق استخدامها.\n\nالمشهد 3 — النهاية: لخّص أهم نقطة واسأل الجمهور عن رأيه.\n\nنص الشاشة: «إيه رأيك؟ اكتب لنا في التعليقات»\nملاحظة: ده نموذج تجريبي؛ اربط خدمة AI للحصول على سكريبت مخصص فعليًا.`;
+ }
+ $('#generateBtn').addEventListener('click',async()=>{
+  const type=$('#toolType').value,prompt=$('#prompt').value.trim(),niche=$('#niche').value.trim(),platform=$('#platform').value,duration=$('#duration').value,language=$('#language').value;
+  if(!prompt&&!niche){toast('اكتب فكرتك أو مجال المحتوى الأول.');return}
+  const btn=$('#generateBtn');btn.disabled=true;btn.textContent='⏳ جاري التجهيز...';$('#aiNotice').classList.remove('hide');
+  const endpoint=localStorage.getItem(keys.endpoint);
+  if(endpoint){
+   try{
+    const res=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({type,prompt,niche,platform,duration,language})});
+    if(!res.ok)throw new Error('HTTP '+res.status);
+    const data=await res.json();outputText=String(data.text||data.output||data.content||'لم ترجع الخدمة نصًا.');$('#output').textContent=outputText;$('#aiNotice').textContent='تم الاتصال بعنوان AI endpoint. تأكد من أن الخدمة متصلة بمزوّد AI حقيقي.';$('#aiNotice').classList.remove('hide');
+   }catch(e){outputText=sampleOutput(type,prompt,niche,platform,duration,language);$('#output').textContent=outputText;$('#aiNotice').textContent='تعذّر الاتصال بخدمة AI؛ المعروض نموذج تجريبي. راجع إعدادات الخدمة.';toast('فشل الاتصال. راجع عنوان الخدمة وإعدادات CORS.')}
+  }else{outputText=sampleOutput(type,prompt,niche,platform,duration,language);$('#output').textContent=outputText;$('#aiNotice').textContent='الوضع التجريبي: هذه أمثلة جاهزة وليست استجابة من نموذج ذكاء اصطناعي.'}
+  btn.disabled=false;btn.textContent='✨ ولّد المحتوى';
+ });
+ renderIdeas();renderSaved();
+ const configured=Boolean(localStorage.getItem(keys.endpoint)&&localStorage.getItem(keys.sburl)&&localStorage.getItem(keys.sbkey));
+ if(configured){$('#connectionStatus').innerHTML='<span class="dot" style="background:#ffca70"></span> تم إدخال إعدادات — لم يتم التحقق من اتصال المجتمع';$('#serviceLabel').textContent='إعدادات أُدخلت'}
+})();
+</script>
+</body>
+</html>
